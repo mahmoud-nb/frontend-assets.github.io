@@ -1,0 +1,22 @@
+<h1 style="padding:8px;">{{ selectedItme.title }}</h1>
+<div ng-controller="assetsController">
+
+
+	<p 
+	data-height="660" 
+	data-theme-id="0" 
+	data-slug-hash="{{ selectedItme.id }}" 
+	data-default-tab="html,result" 
+	data-user="{{ selectedItme.user.username }}" 
+	data-embed-version="2" 
+	data-pen-title="{{ selectedItme.title }}" 
+	class="codepen" >
+
+	See the Pen <a href="http://codepen.io/mahmoud-nb/pen/{{ selectedItme.id }}/">{{ selectedItme.title }}</a> by {{ selectedItme.user.username }} (<a href="http://codepen.io/mahmoud-nb">@mahmoud-nb</a>) on <a href="http://codepen.io">CodePen</a>.
+
+	</p>
+
+
+	<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+</div>

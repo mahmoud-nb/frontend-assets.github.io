@@ -1,0 +1,69 @@
+
+
+
+
+
+<div class="container" ng-controller="assetsController" >
+        <div class="row">
+
+                <!-- start of page content -->
+                <div class="span8 page-content">
+
+                  <!-- Basic Home Page Template -->
+                  <div class="row separator">
+                    <section class="span8 articles-list">
+                      <h3>Featured Articles</h3>
+                      <ul class="articles">
+                           <li ng-repeat="item in itmes " class="article-entry standard">
+                              <div class="itemImg"><img ng-src="{{ item.images.small }}" /></div>
+                              <div class="itemData">
+                              <h3><a href="javascript:void(0)" ng-click="getDetails(item.id)" >{{ item.title }}</a></h3>
+                              <p>{{ item.details | limitTo : 5 }}</p>
+                              <span class="article-meta">Written and coded by <a href="javascript:void(0)" title="View all posts in Server &amp; Database">{{ item.user.username }}</a></span>
+                              <div class="counts">
+                              <span class="like-count" ng-if="item.loves">{{ item.loves }}</span>
+                              <span class="views-count" ng-if="item.views">{{ item.views }}</span>
+                              </div>
+                              </div>
+                           </li>
+                      </ul>
+                      <a href="javascript:void(0)" ng-click="loadMore()" class="btn" style="display: block; text-align: center;" >Load More</a>
+                    </section>
+
+
+                          
+                  </div>
+                </div>
+                <!-- end of page content -->
+
+
+                <!-- start of sidebar -->
+                <aside class="span4 page-sidebar">
+                        <br />
+                      
+                        <section class="widget">
+                                <h3 class="title">By user</h3>
+                                <div class="tagcloud">
+                                        <a href="javascript:void(0)" ui-sref="app.assets.byusername({'username':'mahmoud-nb'})" class="btn btn-mini">Mahmoud</a>
+                                        <a href="javascript:void(0)" ui-sref="app.assets.byusername({'username':'ghcine'})" class="btn btn-mini">Ghassen</a>
+                                        <a href="javascript:void(0)" ui-sref="app.assets.byusername({'username':'onssouayeh'})" class="btn btn-mini">Ons</a>
+                                        <a href="javascript:void(0)" class="btn btn-mini">Marwa</a>
+                                </div>
+                        </section>
+
+                        <section class="widget">
+                                <h3 class="title">By tag</h3>
+                                <div class="tagcloud">
+                                        <a href="javascript:void(0)" class="btn btn-mini">html</a>
+                                        <a href="javascript:void(0)" class="btn btn-mini">css</a>
+                                        <a href="javascript:void(0)" class="btn btn-mini">javascript</a>
+                                        <a href="javascript:void(0)" class="btn btn-mini">emailing</a>
+                                        <a href="javascript:void(0)" class="btn btn-mini">RWD</a>
+
+                                </div>
+                        </section>
+
+                </aside>
+                <!-- end of sidebar -->
+        </div>
+</div>

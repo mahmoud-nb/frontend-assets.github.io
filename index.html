@@ -1,28 +1,62 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
+<html lang="en" data-ng-app="app">
+<head>
+  <meta charset="UTF-8">
+
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="True" name="HandheldFriendly">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="no" name="msapplication-tap-highlight">
+
+  <title>knowledge</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+
+  <!-- Style Sheet-->
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel='stylesheet' id='bootstrap-css-css'  href='assets/css/bootstrap5152.css?ver=1.0' type='text/css' media='all' />
+  <link rel='stylesheet' id='responsive-css-css'  href='assets/css/responsive5152.css?ver=1.0' type='text/css' media='all' />
+  <link rel='stylesheet' id='pretty-photo-css-css'  href='js/prettyphoto/prettyPhotoaeb9.css?ver=3.1.4' type='text/css' media='all' />
+  <link rel='stylesheet' id='main-css-css'  href='assets/css/main5152.css?ver=1.0' type='text/css' media='all' />
+  <!-- <link rel='stylesheet' id='custom-css-css'  href='assets/css/custom5152.html?ver=1.0' type='text/css' media='all' /> -->
+
+</head>
+<body data-ng-controller="mainController">
+
+  <div id="app" ui-view></div> 
+
+  <!-- jQuery -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+
+  <!-- Angular -->
+  <script src="assets/vendor/angular/angular.js"></script>
+  
+  <!-- Vendors -->
+  <script src="assets/vendor/angular/angular-ui-router/angular-ui-router.js"></script> 
+
+
+
+  
+
+
+
+  <!-- Modules -->
+  <script src="app/init.config.js"></script>
+  <script src="app/app.config.js"></script>
+
+  <script src="app/modules/home/home.config.js"></script>
+  <script src="app/modules/assets/assets.config.js"></script>
+
+  
+  <!-- Controllers -->
+  <script src="app/main/controllers/mainController.js"></script>    
+  <script src="app/modules/home/controllers/homeController.js"></script>  
+  <script src="app/modules/assets/controllers/assetsController.js"></script>  
+
+  <!-- services -->
+  <script src="app/main/services/requestService.js"></script>  
+  <script src="app/main/services/codepenService.js"></script>  
+</body>
 </html>
